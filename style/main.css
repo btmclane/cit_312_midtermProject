@@ -1,0 +1,150 @@
+* {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+.wrapper {
+  width: 100%;
+  min-height: 500px;
+  text-align: center;
+}
+img {
+  height: 200px;
+  width: 200px;
+}
+nav {
+  z-index: 1000;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 30%;
+  height: 100vh;
+  border: 1px;
+  padding: 1px;
+  background-color: gold;
+  text-align: center;
+  transform: translateY(-100%);
+  transition: transform 0.1s ease;
+}
+nav.twitter {
+  float: left;
+}
+nav:target {
+  transform: translateY(0);
+}
+nav > ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  width: 100%;
+}
+nav > ul a {
+  text-decoration: none;
+  font-weight: bolder;
+  font-size: larger;
+  padding: 2px;
+  margin: 2px;
+  color: #f8f5f5;
+  display: block;
+}
+nav > ul a:link {
+  color: #ffffff;
+}
+nav > ul a:hover {
+  color: #121312;
+  background-color: lightgoldenrodyellow;
+}
+nav .close {
+  position: absolute;
+  top: 0;
+  left: 0;
+  padding: 3px;
+  margin: 3px;
+}
+@media screen and (min-width: 700px) {
+  nav {
+    position: static;
+    height: auto;
+    transform: translateY(0);
+    width: 100%;
+  }
+  nav .hamburger,
+  nav .close {
+    display: none;
+  }
+  nav li {
+    display: inline-block;
+  }
+}
+/* Footer styling */
+footer {
+  background-color: #f8f8f8;
+  color: #555;
+  font-size: 14px;
+  padding: 30px;
+}
+footer .footer-container {
+  display: flex;
+  justify-content: space-between;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+footer .footer-container .teacher-info,
+footer .footer-container .school-info {
+  width: 45%;
+}
+footer .footer-container .teacher-info h4,
+footer .footer-container .school-info h4 {
+  margin-bottom: 10px;
+  font-size: 18px;
+}
+footer .footer-container .teacher-info p,
+footer .footer-container .school-info p {
+  margin-bottom: 5px;
+}
+footer .footer-container .teacher-info a,
+footer .footer-container .school-info a {
+  color: #555;
+  text-decoration: none;
+}
+footer .footer-container .teacher-info a:hover,
+footer .footer-container .school-info a:hover {
+  text-decoration: underline;
+}
+/* Poems and videos */
+.poem {
+  font-size: 21px;
+  border: 3px solid gold;
+  border-radius: 15px;
+  margin-left: 40%;
+  margin-right: 40%;
+  width: auto;
+  height: auto;
+  text-align: center;
+  font-family: 'Mystery Quest', cursive;
+}
+iframe {
+  border: 5px solid gold;
+  border-radius: 15px;
+}
+.button {
+  position: relative;
+  overflow: hidden;
+  width: 200px;
+  font-size: 20px;
+  letter-spacing: 1px;
+  background-color: gold;
+  color: #0c0c0c;
+  font-family: 'Mystery Quest', cursive;
+  text-shadow: 0 1px 0 rgba(0, 0, 0, 0.7);
+}
+.button:hover {
+  background-color: #31251e;
+  color: #fff;
+}
+.button:active {
+  top: 1px;
+  -o-transition: none;
+  -ms-transition: none;
+  -moz-transition: none;
+  -webkit-transition: none;
+  transition: none;
+}

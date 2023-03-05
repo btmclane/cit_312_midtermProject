@@ -1,0 +1,173 @@
+@font-stack: Verdana, Geneva, Tahoma, sans-serif;
+@nav-background: gold;
+@nav-width: 30%;
+@nav-height: 100vh;
+@nav-transition: transform 0.1s ease;
+@nav-target-translate: translateY(0);
+@nav-initial-translate: translateY(-100%);
+
+* {
+  font-family: @font-stack;
+}
+
+.wrapper {
+  width: 100%;
+  min-height: 500px;
+  text-align: center;
+}
+img {
+    height: 200px;
+    width: 200px;
+  }
+
+nav {
+  z-index: 1000;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: @nav-width;
+  height: @nav-height;
+  border: 1px;
+  padding: 1px;
+  background-color: @nav-background;
+  text-align: center;
+  transform: @nav-initial-translate;
+  transition: @nav-transition;
+
+  &.twitter {
+    float: left;
+  }
+
+  &:target {
+    transform: @nav-target-translate;
+  }
+
+  > ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    width: 100%;
+
+    a {
+      text-decoration: none;
+      font-weight: bolder;
+      font-size: larger;
+      padding: 2px;
+      margin: 2px;
+      color: rgb(248, 245, 245);
+      display: block;
+
+      &:link {
+        color: rgb(255, 255, 255);
+      }
+
+      &:hover {
+        color: rgb(18, 19, 18);
+        background-color: lightgoldenrodyellow;
+      }
+    }
+  }
+
+  .close {
+    position: absolute;
+    top: 0;
+    left: 0;
+    padding: 3px;
+    margin: 3px;
+  }
+
+  @media screen and (min-width: 700px) {
+    position: static;
+    height: auto;
+    transform: @nav-target-translate;
+    width: 100%;
+
+    .hamburger, .close {
+      display: none;
+    }
+
+    li {
+      display: inline-block;
+    }
+  }
+}
+
+/* Footer styling */
+footer {
+  background-color: #f8f8f8;
+  color: #555;
+  font-size: 14px;
+  padding: 30px;
+
+  .footer-container {
+    display: flex;
+    justify-content: space-between;
+    max-width: 1000px;
+    margin: 0 auto;
+
+    .teacher-info, .school-info {
+      width: 45%;
+
+      h4 {
+        margin-bottom: 10px;
+        font-size: 18px;
+      }
+
+      p {
+        margin-bottom: 5px;
+      }
+
+      a {
+        color: #555;
+        text-decoration: none;
+
+        &:hover {
+          text-decoration: underline;
+        }
+      }
+    }
+  }
+}
+
+/* Poems and videos */
+.poem {
+  font-size: 21px;
+  border: 3px solid @nav-background;
+  border-radius: 15px;
+  margin-left: 40%;
+  margin-right: 40%;
+  width: auto;
+  height: auto;
+  text-align: center;
+  font-family: 'Mystery Quest', cursive;
+}
+
+iframe {
+  border: 5px solid @nav-background;
+  border-radius: 15px;
+}
+
+.button {
+  position: relative;
+  overflow: hidden;
+  width: 200px;
+  font-size: 20px;
+  letter-spacing: 1px;
+  background-color: @nav-background;
+  color: #0c0c0c;
+  font-family: 'Mystery Quest', cursive;
+
+  text-shadow: 0 1px 0 rgba(0,0,0,0.7);
+}
+.button:hover {
+  background-color: #31251e;
+  color: #fff;
+}
+.button:active { 
+  top: 1px;
+  -o-transition: none;
+  -ms-transition: none;
+  -moz-transition: none;
+  -webkit-transition: none;
+  transition: none;
+}

@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Neely-Menu</title>
+    <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css"
+    />
+    <link rel="icon" type="image/x-icon" href="/images/faviconk.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Mystery+Quest&family=Roboto:ital,wght@1,700&display=swap" rel="stylesheet">
+    <link rel="stylesheet/less" type="text/css" href="style/main.less"/>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/less.js/3.11.3/less.min.js"></script>
+  </head>
+  <body>
+    <div>
+        <a class="hamburger" href="#navbar">
+            <i class="fa-solid fa-bars"></i>
+        </a>
+      <nav id="navbar">
+        <ul>
+            <i class="fa-solid fa-house"></i>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="simile.html">Similes</a></li>
+          <li><a href="metaphor.html">Metaphors</a></li>
+          <li><a href="hyperbole.html">Hyperbole</a></li>
+          <li><a href="alliteration.html">Alliteration</a></li>
+          <li><a href="idiom.html">Idioms</a></li>
+          <li class="twitter"><a href="https://twitter.com/mtcomfortelem">
+                <i class="fa-brands fa-twitter twitter"></i>
+            </a></li>
+        </ul>
+        <div>
+          <a class="close" href="#">
+            <i class="fa-solid fa-xmark"></i>
+        </a>
+        </div>
+      </nav>
+      </div>
+    <div class="wrapper">
+      <h1>The Neely Menu</h1>
+      <h2>What is an Idiom? </h2>
+      <p>An idiom is a common expression that has a different meaning than what is being said. </p>
+      <p>Lets Learn more about idioms! </p>
+      <p>
+        <label>Learn More About Idioms:</label>
+        <button class="button" onclick="showMovies()" value="1">Video 1</button>
+        <button class="button" onclick="showMovies()" value="2">Video 2</button>
+      </p>
+      <iframe 
+        id="movie"
+        width="500"
+        height="300"
+        frameborder="0" 
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+        allowfullscreen
+        ></iframe>
+      <p>
+        <p>After we watched the videos let read some poems and find idioms</p>
+        <label>Poem about idioms:</label>
+        <button class="button" onclick="showPoems()" value="1">Poem 1<br>Something to tell you</button>
+        <button class="button" onclick="showPoems()" value="2">Poem 2<br/>Losing Pieces</button>
+        <button class="button" onclick="showPoems()" value="3">Poem 3<br/>Every thing on it</button>
+      </p>
+      <p class="poem"></p>
+    </div>
+    <footer>
+      <div class="footer-container">
+        <div class="teacher-info">
+          <h4>Erin Neely</h4>
+          <p>Email: <a href="mailto:[Teacher's Email]">ErinNeely@mail.com</a></p>
+        </div>
+        <div class="school-info">
+          <h4>Mt Vernon school</h4>
+          <p>123 main st</p>
+          <p>Phone: 000-000-0000</p>
+        </div>
+      </div>
+    </footer>
+  </body>
+  <script src="idiom.js"></script>
+</html>
